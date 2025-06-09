@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="login-container">
+    <div>
+      <img src="./IMG/image copy.png" alt="Logo do Login" class="login-image" />
+    </div>
+
+    <!-- FORMULÁRIO LINKADO AO PHP -->
+    <form id="form-login" method="POST" action="login.php">
+      <div class="container">
+        <div class="input-with-icon">
+          <img src="./IMG/email.png" alt="Ícone de email" class="input-icon" />
+          <label for="email"></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email ID"
+            required
+            autocomplete="off"
+          />
+        </div>
+        <div class="input-with-icon">
+          <img src="./IMG/cadeado.png" alt="Ícone de senha" class="input-icon cadeado" />
+          <label for="password"></label>
+          <input
+            type="password"
+            id="password"
+            name="senha"
+            placeholder="Senha"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="remember-me">
+        <div class="checkbox">
+          <input class="checkbox" type="checkbox" id="remember" name="remember" />
+          <label for="remember">Lembrar senha</label>
+        </div>
+
+        <div>
+          <a href="senha.html" class="forgot-password">Esqueci minha senha</a>
+        </div>
+      </div>
+
+      <button type="submit">LOGIN</button>
+    </form>
+
+    <p class="register-link"><a href="./cadastro.html">Cadastre-se</a></p>
+
+  </div>
+  
+<script>
+  // Lidar com o login
+  document.querySelector("#botao-cadastrar").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const email = document.querySelector("#email").value;
+    const senha = document.querySelector("#senha").value;
+
+    // Simulação de login (você pode adaptar com backend real)
+    if (email === "teste@email.com" && senha === "123456") {
+      sessionStorage.setItem("logado", "true");
+
+      const destino = sessionStorage.getItem("destino_pos_login");
+      if (destino) {
+        sessionStorage.removeItem("destino_pos_login");
+        window.location.href = destino;
+      } else {
+        window.location.href = "../index.html";
+      }
+    } else {
+      alert("E-mail ou senha inválidos!");
+    }
+  });
+
+  // Redirecionar para o cadastro
+  document.querySelector("#botao-cadastrar").addEventListener("click", function (e) {
+    e.preventDefault();
+    window.location.href = "./cadastro.html";
+  });
+</script>
+
+</body>
+
+</html>

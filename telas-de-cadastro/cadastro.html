@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form class="container" method="POST" action="cadastrar.php">
+
+        <h2 class="recuperarstyle">Cadastro</h2>
+
+        <div class="input-with-icon">
+            <img src="./IMG/user.png" alt="Ícone de nome" class="input-icon">
+            <input type="text" name="nome" placeholder="Nome Completo" required>
+        </div>
+
+        <div class="input-with-icon">
+            <img src="./IMG/email.png" alt="Ícone de email" class="input-icon">
+            <input type="email" name="email" placeholder="Digite seu e-mail" required>
+        </div>
+
+        <div class="input-with-icon">
+            <img src="./IMG/cpf.png" alt="Ícone de CPF" class="input-icon">
+            <input type="text" name="cpf_cnpj" placeholder="CPF / CNPJ" required maxlength="18">
+        </div>
+
+        <div class="input-with-icon">
+            <img src="./IMG/cadeado.png" alt="Ícone de cadeado" class="input-icon cadeado">
+            <input type="password" name="senha" placeholder="Senha" required>
+        </div>
+
+        <div class="input-with-icon">
+            <img src="./IMG/cadeado.png" alt="Ícone de cadeado" class="input-icon cadeado">
+            <input type="password" name="confirma_senha" placeholder="Confirme a senha" required>
+        </div>
+
+        <div class="login">
+            <p class="login-link"><a href="login.html">Login</a></p>
+
+            <div class="botao">
+                <button class="register-btn" type="submit">Registrar</button>
+            </div>
+        </div>
+    </form>
+
+    <script>
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault(); // impede envio real
+
+  // Aqui você pode validar os dados (ex: senha == confirma_senha)
+
+  sessionStorage.setItem('logado', 'true');
+  const destino = sessionStorage.getItem('destino_pos_login');
+
+  if (destino) {
+    sessionStorage.removeItem('destino_pos_login');
+    window.location.href = destino;
+  } else {
+    window.location.href = "./index.html";
+  }
+});
+</script>
+
+</body>
+
+</html>

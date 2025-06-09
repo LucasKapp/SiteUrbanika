@@ -1,0 +1,152 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* Expande a imagem além das bordas */
+  left: -10px;
+  width: calc(100% + 40px); /* Aumenta a largura */
+  height: calc(100% + 40px); /* Aumenta a altura */
+  filter: blur(8px);
+  z-index: -1;
+}
+
+.container {
+  border-radius: 8px;
+  width: 850px;
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.input-with-icon {
+  position: relative;
+  margin: 15px 0;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: white;
+}
+
+body .container input {
+  width: 100%;
+  padding: 10px 10px 10px 55px;
+  margin: 10px 0;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #ffffff;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+body .container ::-webkit-input-placeholder {
+  font-size: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  position: relative;
+  bottom: 20px;
+  padding: px;
+}
+
+.send-btn {
+  position: relative;
+  padding: 10px 25px;
+  background-color: #0f800b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.send-btn:hover {
+  background-color: none;
+}
+
+.back-link {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.login {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-link {
+  padding: 20px 20px;
+  margin-top: 15px;
+  color: #ffffff;
+}
+
+.login-link a {
+  color: #ffffff;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+input::placeholder {
+  color: #ffffff;
+  opacity: 1;
+  font-size: 10px;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid #ccc;
+}
+
+body .login .botao .register-btn {
+  background-color: #0f800b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 10px;
+  text-transform: uppercase;
+}
+
+body .login .botao .register-btn a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+body .login .botao .register-btn:hover {
+  background-color: #024200;
+}

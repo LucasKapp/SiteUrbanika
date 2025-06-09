@@ -1,0 +1,32 @@
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111111;
+}
+
+*, dd {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[src$=".jpg"] {
+  border-radius: 4px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

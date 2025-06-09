@@ -1,0 +1,175 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* Expande a imagem além das bordas */
+  left: -10px;
+  width: calc(100% + 40px); /* Aumenta a largura */
+  height: calc(100% + 40px); /* Aumenta a altura */
+  filter: blur(8px);
+  z-index: -1;
+}
+
+.login-container {
+  display: grid;
+  width: 850px;
+  text-align: center;
+}
+
+body .login-container .input-with-icon ::-webkit-input-placeholder {
+  font-size: 20px;
+}
+
+.container-email-senha {
+  display: grid;
+  gap: 20px;
+}
+
+.input-with-icon .cadeado {
+  width: 30px;
+  height: 30px;
+  top: 23px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  display: block;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  background-color: transparent;
+  outline: none;
+  color: #fff;
+}
+
+input[type="email"] {
+  position: relative;
+  display: flex;
+  align-items: center;
+  image-rendering: 1fr 1fr;
+  width: 100%;
+  padding-left: 40px;
+  border: none;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  outline: none;
+  background-color: transparent;
+  color: white;
+}
+
+.remember-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /*Garante que ocupe toda a largura disponível */
+  white-space: nowrap; /* Impede que o texto quebre para a linha de baixo */
+  margin-bottom: 30px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap; /* Evita que o texto quebre */
+}
+
+.forgot-password {
+  white-space: nowrap; /* Evita que "Esqueci minha senha" quebre também */
+  color: white;
+  text-decoration: none;
+}
+
+.remember-me label {
+  color: white;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0f800b;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #055002;
+}
+
+/* .forgot-password {
+  display: block;
+  text-align: right;
+  margin: 10px 0;
+  text-decoration: none;
+  width: 602px;
+  height: 72px;
+  left: 480px;
+  top: 520px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 6px;
+  font-size: 15px;
+  color: #ffffff;
+} */
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.register-link {
+  margin-top: 15px;
+  color: #ffffff;
+}
+
+.register-link a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  font-size: 0.8em;
+  color: white;
+  opacity: 1;
+}
+
+.login-image {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+input[type="password"] {
+  width: 100%;
+  padding-left: 40px; /* Garante espaço para o ícone */
+  border: none;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  outline: none;
+  background-color: transparent;
+  color: white;
+}
+
+.container-email-senha {
+  display: grid;
+}
